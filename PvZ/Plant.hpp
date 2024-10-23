@@ -6,6 +6,9 @@
 class Plant : public Entity
 {
     int mAmmoCount, mMaxAmmo;
+
+    Transition* mIdleTransition;
+    Transition* mShootTransition;
    
 public:
 
