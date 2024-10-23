@@ -16,9 +16,16 @@ Playground* Playground::instantiate()
 
 void Playground::Init(sf::RenderWindow& window)
 {
+	// -- ZOMBIE WALK STATE -- //
+	//Action* idleAction = (Action*)(new WalkAction());
+	//mIdleTransition->addCondition();
+	//mIdleTransition->setTargetState(Context::State::Idle);
+	//mPlantsBehavior->AddTransition(Context::State::Idle, mIdleTransition);
+	//mPlantsBehavior->AddAction(Context::State::Idle, idleAction);
+
 	for (int i = 0; i < 8; i++)
 	{
-		Plant* plant = new Plant(sf::Vector2f(10, 50 + (i * 100)), nullptr, 10, 5, "Pisto-Poids", sf::Color::Green);
+		Plant* plant = new Plant(sf::Vector2f(10, 25 + (i * 100)), mPlantsBehavior, 10, 5, "Pisto-Poid", sf::Color::Green);
 		plant->Init();
 		Lane* line = new Lane(sf::Vector2f(0, i * 100), sf::Vector2f(window.getSize().x, 100));
 		line->Init();
@@ -57,4 +64,19 @@ void Playground::handleUserInput(sf::Event& event, sf::RenderWindow& window)
 		zombie->Init(mLine.at(sf::Mouse::getPosition(window).y / 100)->getPosition().y);
 		mZombies.push_back(zombie);
 	}
+}
+
+std::vector<Zombies*> Playground::GetZombies()
+{
+	return mZombies;
+}
+
+std::vector<Plant*> Playground::GetPlant()
+{
+	return mPlants;
+}
+
+std::vector<Projectile*> Playground::GetProjectile()
+{
+	return mProjectiles;
 }

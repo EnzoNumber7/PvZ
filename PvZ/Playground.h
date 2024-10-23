@@ -6,6 +6,9 @@
 #include "Lane.h"
 #include <iostream>
 
+class Transition;
+class Behavior;
+
 class Playground
 {
 private:
@@ -13,11 +16,15 @@ private:
 
 	Playground();
 
-public:
 	std::vector<Plant*>			mPlants;
 	std::vector<Zombies*>		mZombies;
 	std::vector<Projectile*>	mProjectiles;
 	std::vector<Lane*>			mLine;
+
+	Behaviour*					mPlantsBehavior;
+	Behaviour*					mZombiesBehavior;
+
+public:
 
 	static Playground* instantiate();
 	static Playground* getInstance() {
@@ -28,6 +35,9 @@ public:
 	void Init(sf::RenderWindow& window);
 	void draw(sf::RenderWindow& window);
 	void update();
-	void handleUserInput(sf::Event& event, sf::RenderWindow&
-		window);
+	void handleUserInput(sf::Event& event, sf::RenderWindow& window);
+
+	std::vector<Zombies*>		GetZombies();
+	std::vector<Plant*>			GetPlant();
+	std::vector<Projectile*>	GetProjectile();
 };

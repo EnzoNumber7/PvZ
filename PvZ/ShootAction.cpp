@@ -18,3 +18,8 @@ void ShootAction::Update(Entity* entity)
 		clock.restart();
 	}
 }
+
+void ShootAction::End(Entity* entity)
+{
+
+}
