@@ -1,10 +1,11 @@
 #include <SFML/Graphics.hpp>
+#include "Playground.h"
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1300, 800), "PvZ");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    Playground::instantiate();
+    Playground::getInstance()->Init();
 
     while (window.isOpen())
     {
@@ -16,7 +17,7 @@ int main()
         }
 
         window.clear();
-        window.draw(shape);
+        Playground::getInstance()->draw(window);
         window.display();
     }
 

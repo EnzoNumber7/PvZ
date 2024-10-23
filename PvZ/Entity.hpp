@@ -18,14 +18,12 @@ protected:
 	sf::CircleShape	mShape;
 
 public:
-	Entity(sf::Vector2f position, Behaviour* behaviour, int health, std::string name, sf::Color color) 
-	{
-		position = { 0, 0 }, behaviour = nullptr, health = 0, name = "", color = sf::Color::Green;
-	};
+	Entity(sf::Vector2f position, Behaviour* behaviour, int health, std::string name, sf::Color color) {}
 
 	sf::Color getColor() const { return mColor; }
 	sf::Vector2f getPosition() const { return mPosition; }
 	Context::State getState() const { return mState; }
+	sf::CircleShape getShape() const { return mShape; }
 	void setState(Context::State state) { mState = state; }
 	virtual void Update() = 0;
 

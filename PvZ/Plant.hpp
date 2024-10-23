@@ -13,9 +13,12 @@ public:
     ~Plant();
 
     int getAmmoCount() const;
-    void refillMagazine() ;
+    void refillMagazine();
+
+    void Init();
 
     bool shoot();
 
     void Update() override;
+    void checkCollision(std::vector<Entity*>& mColliding, std::vector<Entity*>& mCollider) override;
 };

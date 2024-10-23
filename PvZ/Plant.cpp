@@ -29,6 +29,13 @@ void Plant::refillMagazine()
     mAmmoCount = mMaxAmmo;
 }
 
+void Plant::Init()
+{
+    mShape.setRadius(20.f);
+    mShape.setPosition(mPosition);
+    mShape.setFillColor(mColor);
+}
+
 bool Plant::shoot()
 {
     return false;
@@ -37,4 +44,9 @@ bool Plant::shoot()
 void Plant::Update()
 {
     int a = 0;
+}
+
+void Plant::checkCollision(std::vector<Entity*>& mColliding, std::vector<Entity*>& mCollider)
+{
+    int a = 1;
 }

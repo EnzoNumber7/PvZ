@@ -11,13 +11,17 @@ private:
 	static Playground* mInstance;
 
 	std::vector<Plant*> mPlants;
+	std::vector<Zombies*> mZombies;
 	Playground();
 
 public:
 	static Playground* instantiate();
-	static Playground* getInstance();
+	static Playground* getInstance() {
+		return mInstance;
+	}
 
 	~Playground() { };
+	void Init();
 	void draw(sf::RenderWindow& window);
 	void update();
 	void handleUserInput(sf::Event& event, sf::RenderWindow&
