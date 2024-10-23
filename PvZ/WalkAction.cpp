@@ -14,8 +14,3 @@ void WalkAction::Update(Entity* entity)
 
 	entity->setPosition(newPos);
 }
-
-void WalkAction::End(Entity* entity)
-{
-
-}
