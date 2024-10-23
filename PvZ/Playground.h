@@ -18,9 +18,12 @@ public:
 	std::vector<Projectile*>	mProjectiles;
 
 	static Playground* instantiate();
-	static Playground* getInstance() { return mInstance; };
+	static Playground* getInstance() {
+		return mInstance;
+	}
 
 	~Playground() { };
+	void Init();
 	void draw(sf::RenderWindow& window);
 	void update();
 	void handleUserInput(sf::Event& event, sf::RenderWindow&

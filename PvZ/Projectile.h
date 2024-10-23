@@ -10,7 +10,7 @@ class Projectile : public Entity
 	int		mSpeed;
 
 public:
-	Projectile(sf::Vector2f position, Behaviour* behaviour, int speed);
+	Projectile(sf::Vector2f position, Behaviour* behaviour, int speed, sf::Color color);
 	~Projectile() { };
 
 	void Move();
