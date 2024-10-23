@@ -5,7 +5,6 @@
 
 class Plant : public Entity
 {
-   
     int mAmmoCount, mMaxAmmo;
    
 public:
@@ -21,4 +20,6 @@ public:
     void refillMagazine() ;
 
     bool shoot();
+
+    void Update() override;
 };

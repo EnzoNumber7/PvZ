@@ -7,7 +7,7 @@
 
 class Entity
 {
-public:
+protected:
 
 	int				mHealth;
 	sf::Vector2f	mPosition;
