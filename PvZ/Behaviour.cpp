@@ -1,5 +1,5 @@
 #include "Behaviour.hpp"
-#include "IdleAction.hpp"
+#include "IdleAction.h"
 
 #include "Plant.hpp"
 #include "Transition.hpp"
