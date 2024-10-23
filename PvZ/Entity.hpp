@@ -14,8 +14,9 @@ protected:
 	std::string		mName;
 	Context::State	mState;
 	Behaviour*		mBehaviour;
-
 	sf::Color mColor;
+
+public:
 
 	Entity(sf::Vector2f position, Behaviour* behaviour, int health, std::string name) { };
 

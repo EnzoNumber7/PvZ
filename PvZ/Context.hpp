@@ -6,7 +6,6 @@ enum class State
 {
     Idle,
     Attack,
-    Die,
-    WalkToward
+    Walk
 };
 };

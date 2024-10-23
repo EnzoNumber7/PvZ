@@ -42,3 +42,8 @@ bool Plant::shoot()
 {
     return false;
 }
+
+void Plant::Update()
+{
+    int a = 0;
+}

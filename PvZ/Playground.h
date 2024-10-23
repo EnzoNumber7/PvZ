@@ -10,12 +10,15 @@ class Playground
 private:
 	static Playground* mInstance;
 
-	std::vector<Plant*> mPlants;
 	Playground();
 
 public:
+	std::vector<Plant*>			mPlants;
+	std::vector<Zombies*>		mZombies;
+	std::vector<Projectile*>	mProjectiles;
+
 	static Playground* instantiate();
-	static Playground* getInstance();
+	static Playground* getInstance() { return mInstance; };
 
 	~Playground() { };
 	void draw(sf::RenderWindow& window);

@@ -136,7 +136,10 @@
     <ClCompile Include="Playground.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="PvZ.cpp" />
+    <ClCompile Include="ShootAction.cpp" />
+    <ClCompile Include="ShootCondition.cpp" />
     <ClCompile Include="Transition.cpp" />
+    <ClCompile Include="WalkAction.cpp" />
     <ClCompile Include="Zombies.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +152,10 @@
     <ClInclude Include="Plant.hpp" />
     <ClInclude Include="Playground.h" />
     <ClInclude Include="Projectile.h" />
+    <ClInclude Include="ShootAction.h" />
+    <ClInclude Include="ShootCondition.h" />
     <ClInclude Include="Transition.hpp" />
+    <ClInclude Include="WalkAction.h" />
     <ClInclude Include="Zombies.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
