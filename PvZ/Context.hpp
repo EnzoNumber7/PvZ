@@ -4,6 +4,9 @@ namespace Context
 {
 enum class State 
 {
-    // ajoutez vos états ici
+    Idle,
+    Attack,
+    Die,
+    WalkToward
 };
 };

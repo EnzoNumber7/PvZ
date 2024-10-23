@@ -21,7 +21,7 @@ public:
         int ammo_count);
     ~Plant();
 
-    void setState(Context::State);
+    void setState(Context::State state);
     Context::State getState() const;
 
     sf::Color getColor() const;
