@@ -1,13 +1,15 @@
 #pragma once
 #include "Entity.hpp"
-#include "Behaviour.hpp"
 #include <iostream>
+
+class Transition;
+class Behavior;
 
 class Plant : public Entity
 {
     int mAmmoCount, mMaxAmmo;
 
-    Transition* mIdleTransition;
+    Transition* mWalkTransition;
     Transition* mShootTransition;
    
 public:

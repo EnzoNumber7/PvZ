@@ -16,13 +16,6 @@ Playground* Playground::instantiate()
 
 void Playground::Init(sf::RenderWindow& window)
 {
-	// -- ZOMBIE WALK STATE -- //
-	//Action* idleAction = (Action*)(new WalkAction());
-	//mIdleTransition->addCondition();
-	//mIdleTransition->setTargetState(Context::State::Idle);
-	//mPlantsBehavior->AddTransition(Context::State::Idle, mIdleTransition);
-	//mPlantsBehavior->AddAction(Context::State::Idle, idleAction);
-
 	for (int i = 0; i < 8; i++)
 	{
 		Plant* plant = new Plant(sf::Vector2f(10, 25 + (i * 100)), mPlantsBehavior, 10, 5, "Pisto-Poid", sf::Color::Green);
@@ -60,7 +53,7 @@ void Playground::handleUserInput(sf::Event& event, sf::RenderWindow& window)
 	{
 		sf::Vector2i test = sf::Mouse::getPosition(window);
 		sf::Vector2f aa = (sf::Vector2f)test;
-		Zombies* zombie = new Zombies((sf::Vector2f)sf::Mouse::getPosition(window), nullptr, NULL, 5.f, 8, "Zombie", sf::Color::Red);
+		Zombies* zombie = new Zombies((sf::Vector2f)sf::Mouse::getPosition(window), mZombiesBehavior, NULL, 5.f, 8, "Zombie", sf::Color::Red);
 		zombie->Init(mLine.at(sf::Mouse::getPosition(window).y / 100)->getPosition().y);
 		mZombies.push_back(zombie);
 	}

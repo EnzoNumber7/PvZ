@@ -5,9 +5,15 @@
 #include "Behaviour.hpp"
 #include <iostream>
 
+class Transition;
+
 class Zombies : public Entity
 {
 	int		mSpeed;
+
+
+	Transition* mWalkTransition;
+	Transition* mAttackTransition;
 
 public:
 	Zombies(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int speed, int health, std::string name, sf::Color color);
