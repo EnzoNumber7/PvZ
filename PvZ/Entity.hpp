@@ -22,4 +22,6 @@ public:
 	sf::Color getColor() const;
 	sf::Vector2f getPosition() const;
 	virtual void Update() = 0;
+
+	virtual void checkCollision(std::vector<Entity*>& mColliding, std::vector<Entity*>& mCollider) = 0;
 };
