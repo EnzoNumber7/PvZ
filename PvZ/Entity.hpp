@@ -25,6 +25,7 @@ public:
 	Context::State getState() const { return mState; }
 	sf::CircleShape getShape() const { return mShape; }
 	void setState(Context::State state) { mState = state; }
+	void setPosition(sf::Vector2f position) { mPosition = position; }
 	virtual void Update() = 0;
 
 	virtual void checkCollision(std::vector<Entity*>& mColliding, std::vector<Entity*>& mCollider) = 0;

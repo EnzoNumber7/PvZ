@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AttackAction.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="IdleAction.cpp" />
     <ClCompile Include="Plant.cpp" />
@@ -138,12 +139,14 @@
     <ClCompile Include="PvZ.cpp" />
     <ClCompile Include="ShootAction.cpp" />
     <ClCompile Include="ShootCondition.cpp" />
+    <ClCompile Include="StopShootCondition.cpp" />
     <ClCompile Include="Transition.cpp" />
     <ClCompile Include="WalkAction.cpp" />
     <ClCompile Include="Zombies.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Action.hpp" />
+    <ClInclude Include="AttackAction.h" />
     <ClInclude Include="Behaviour.hpp" />
     <ClInclude Include="Condition.hpp" />
     <ClInclude Include="Context.hpp" />
@@ -154,6 +157,7 @@
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="ShootAction.h" />
     <ClInclude Include="ShootCondition.h" />
+    <ClInclude Include="StopShootCondition.h" />
     <ClInclude Include="Transition.hpp" />
     <ClInclude Include="WalkAction.h" />
     <ClInclude Include="Zombies.h" />
