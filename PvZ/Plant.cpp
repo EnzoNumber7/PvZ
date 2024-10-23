@@ -6,7 +6,7 @@ Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int he
 {
     mAmmoCount = ammo_count;
     mMaxAmmo = ammo_count;
-    mBehaviour = plant_behaviour;
+    mBehaviour = behaviour;
     mPosition = position;
     mHealth = health;
     mName = name;
