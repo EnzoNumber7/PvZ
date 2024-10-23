@@ -1,4 +1,5 @@
 #include "Plant.hpp"
+#include "Context.hpp"
 
 Plant::Plant()
 {
@@ -31,16 +32,6 @@ Context::State Plant::getState() const
     return mState;
 }
 
-sf::Color Plant::getColor() const
-{
-    // oui
-}
-
-sf::Vector2f Plant::getPosition() const
-{
-    return mPosition;
-}
-
 int Plant::getAmmoCount() const
 {
     return mAmmoCount;
@@ -53,7 +44,7 @@ void Plant::refillMagazine()
 
 bool Plant::shoot()
 {
-
+    return false;
 }
 
 void Plant::Update()
