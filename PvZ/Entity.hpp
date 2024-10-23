@@ -5,14 +5,19 @@
 
 class Entity
 {
+public:
+
+	int				mHealth;
 	sf::Vector2f	mPosition;
 	std::string		mName;
-	int				mHealth;
-	Context::State mState;
-	Behaviour* mBehaviour;
+	Context::State	mState;
+	Behaviour*		mBehaviour;
 
 	sf::Color mColor;
 
+	Entity(sf::Vector2f position, Behaviour* plant_behaviour, int health, std::string name);
+
 	sf::Color getColor() const;
 	sf::Vector2f getPosition() const;
+	void Update();
 };

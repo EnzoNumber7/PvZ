@@ -134,6 +134,7 @@
     <ClCompile Include="IdleAction.cpp" />
     <ClCompile Include="PvZ.cpp" />
     <ClCompile Include="Transition.cpp" />
+    <ClCompile Include="Zombies.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Action.hpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="IdleAction.h" />
     <ClInclude Include="Plant.hpp" />
     <ClInclude Include="Transition.hpp" />
+    <ClInclude Include="Zombies.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
