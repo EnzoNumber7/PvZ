@@ -1,8 +1,8 @@
 #include "Plant.hpp"
 #include "Context.hpp"
 
-Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int health, std::string name)
-    : Entity(mPosition, behaviour, health,name)
+Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int health, std::string name, sf::Color color)
+    : Entity(mPosition, behaviour, health,name, color)
 {
     mAmmoCount = ammo_count;
     mMaxAmmo = ammo_count;
@@ -10,22 +10,13 @@ Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int he
     mPosition = position;
     mHealth = health;
     mName = name;
+    mColor = color;
     mState = Context::State::Idle;
 }
 
 Plant::~Plant()
 {
 
-}
-
-void Plant::setState(Context::State state)
-{
-    mState = state;
-}
-
-Context::State Plant::getState() const
-{
-    return mState;
 }
 
 int Plant::getAmmoCount() const
@@ -41,4 +32,9 @@ void Plant::refillMagazine()
 bool Plant::shoot()
 {
     return false;
+}
+
+void Plant::Update()
+{
+    int a = 0;
 }
