@@ -28,4 +28,6 @@ public:
 	Context::State getState() const { return mState; }
 	void setState(Context::State state) { mState = state; }
 	virtual void Update() = 0;
+
+	virtual void checkCollision(std::vector<Entity*>& mColliding, std::vector<Entity*>& mCollider) = 0;
 };

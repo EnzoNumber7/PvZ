@@ -133,6 +133,8 @@
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="IdleAction.cpp" />
     <ClCompile Include="Plant.cpp" />
+    <ClCompile Include="Playground.cpp" />
+    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="PvZ.cpp" />
     <ClCompile Include="Transition.cpp" />
     <ClCompile Include="Zombies.cpp" />
@@ -145,6 +147,8 @@
     <ClInclude Include="Entity.hpp" />
     <ClInclude Include="IdleAction.h" />
     <ClInclude Include="Plant.hpp" />
+    <ClInclude Include="Playground.h" />
+    <ClInclude Include="Projectile.h" />
     <ClInclude Include="Transition.hpp" />
     <ClInclude Include="Zombies.h" />
   </ItemGroup>
