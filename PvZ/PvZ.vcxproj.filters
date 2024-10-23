@@ -27,6 +27,9 @@
     <ClCompile Include="IdleAction.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Plant.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="Zombies.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>

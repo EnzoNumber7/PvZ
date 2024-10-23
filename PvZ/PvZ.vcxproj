@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="IdleAction.cpp" />
+    <ClCompile Include="Plant.cpp" />
     <ClCompile Include="PvZ.cpp" />
     <ClCompile Include="Transition.cpp" />
     <ClCompile Include="Zombies.cpp" />

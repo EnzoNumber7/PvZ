@@ -1,6 +1,5 @@
 #pragma once
 #include "Entity.hpp"
-#include "Context.hpp"
 #include "Behaviour.hpp"
 #include <iostream>
 
@@ -14,7 +13,7 @@ public:
     Plant(sf::Vector2f position, Behaviour* plant_behaviour, int ammo_count);
     ~Plant();
 
-    void setState(Context::State);
+    void setState(Context::State state);
     Context::State getState() const;
 
 
