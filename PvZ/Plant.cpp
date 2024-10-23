@@ -7,7 +7,7 @@
 #include "Behaviour.hpp"
 
 Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int health, std::string name, sf::Color color)
-    : Entity(mPosition, behaviour, health,name, color)
+    : Entity(position, behaviour, health,name, color)
 {
     mAmmoCount = ammo_count;
     mMaxAmmo = ammo_count;
@@ -53,6 +53,7 @@ void Plant::Init()
     mShape.setRadius(20.f);
     mShape.setPosition(mPosition);
     mShape.setFillColor(mColor);
+    mShape.setOrigin(mShape.getRadius(), mShape.getRadius());
 }
 
 bool Plant::shoot()

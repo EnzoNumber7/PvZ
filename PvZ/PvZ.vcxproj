@@ -133,6 +133,7 @@
     <ClCompile Include="AttackAction.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="IdleAction.cpp" />
+    <ClCompile Include="Lane.cpp" />
     <ClCompile Include="Plant.cpp" />
     <ClCompile Include="Playground.cpp" />
     <ClCompile Include="Projectile.cpp" />
@@ -152,6 +153,7 @@
     <ClInclude Include="Context.hpp" />
     <ClInclude Include="Entity.hpp" />
     <ClInclude Include="IdleAction.h" />
+    <ClInclude Include="Lane.h" />
     <ClInclude Include="Plant.hpp" />
     <ClInclude Include="Playground.h" />
     <ClInclude Include="Projectile.h" />

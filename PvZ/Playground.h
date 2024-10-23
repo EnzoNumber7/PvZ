@@ -1,9 +1,10 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <iostream>
 #include "Plant.hpp"
 #include "Zombies.h"
 #include "Projectile.h"
+#include "Lane.h"
+#include <iostream>
 
 class Transition;
 class Behavior;
@@ -18,6 +19,7 @@ private:
 	std::vector<Plant*>			mPlants;
 	std::vector<Zombies*>		mZombies;
 	std::vector<Projectile*>	mProjectiles;
+	std::vector<Lane*>			mLine;
 
 	Behaviour*					mPlantsBehavior;
 	Behaviour*					mZombiesBehavior;
@@ -30,7 +32,7 @@ public:
 	}
 
 	~Playground() { };
-	void Init();
+	void Init(sf::RenderWindow& window);
 	void draw(sf::RenderWindow& window);
 	void update();
 	void handleUserInput(sf::Event& event, sf::RenderWindow& window);
