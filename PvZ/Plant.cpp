@@ -1,19 +1,16 @@
 #include "Plant.hpp"
 #include "Context.hpp"
 
-Plant::Plant()
-{
-
-}
-
 Plant::Plant(sf::Vector2f position,
     Behaviour* plant_behaviour,
-    int ammo_count)
+    int ammo_count, int health, std::string name) : Entity(position, plant_behaviour, health, name)
 {
     mAmmoCount = ammo_count;
     mMaxAmmo = ammo_count;
     mBehaviour = plant_behaviour;
     mPosition = position;
+    mHealth = health;
+    mName = name;
     mState = Context::State::Idle;
 }
 

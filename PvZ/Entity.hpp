@@ -7,7 +7,7 @@
 
 class Entity
 {
-public:
+protected:
 
 	int				mHealth;
 	sf::Vector2f	mPosition;
@@ -21,5 +21,5 @@ public:
 
 	sf::Color getColor() const;
 	sf::Vector2f getPosition() const;
-	void Update();
+	virtual void Update() = 0;
 };
