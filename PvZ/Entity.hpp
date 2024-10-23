@@ -17,9 +17,9 @@ public:
 
 	sf::Color mColor;
 
-	Entity(sf::Vector2f position, Behaviour* plant_behaviour, int health, std::string name);
+	Entity(sf::Vector2f position, Behaviour* plant_behaviour, int health, std::string name) { };
 
 	sf::Color getColor() const;
 	sf::Vector2f getPosition() const;
-	void Update();
+	virtual void Update() = 0;
 };

@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.hpp"
+#include "Plant.hpp"
 #include "Context.hpp"
 #include "Behaviour.hpp"
 #include <iostream>
@@ -14,5 +15,7 @@ public:
 
 	void setState(Context::State);
 	Context::State getState() const;
+
+	void Attack(Plant* plant);
 };
 

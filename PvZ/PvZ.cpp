@@ -2,7 +2,7 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(650, 400), "PvZ");
+    sf::RenderWindow window(sf::VideoMode(1300, 800), "PvZ");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 

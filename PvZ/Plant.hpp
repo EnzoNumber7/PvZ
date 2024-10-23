@@ -10,7 +10,7 @@ class Plant : public Entity
    
 public:
 
-    Plant(sf::Vector2f position, Behaviour* plant_behaviour, int ammo_count);
+    Plant(sf::Vector2f position, Behaviour* plant_behaviour, int ammo_count, int health, std::string name);
     ~Plant();
 
     void setState(Context::State state);
