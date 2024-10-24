@@ -16,10 +16,13 @@ int main()
                 window.close();
             Playground::getInstance()->handleUserInput(event, window);
         }
+        
+        Playground::getInstance()->update();
 
         window.clear();
         Playground::getInstance()->draw(window);
         window.display();
+       
     }
 
     return 0;

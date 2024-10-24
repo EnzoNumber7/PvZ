@@ -5,9 +5,11 @@
 #include "WalkAction.h"
 #include "Transition.hpp"
 #include "Behaviour.hpp"
+#include "Projectile.h"
+#include "Playground.h"
 
 Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int health, std::string name, sf::Color color)
-    : Entity(position, behaviour, health,name, color)
+    : Entity(position, behaviour, health, name, color)
 {
     mAmmoCount = ammo_count;
     mMaxAmmo = ammo_count;
@@ -18,21 +20,7 @@ Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int he
     mColor = color;
     mState = Context::State::Idle;
 
-    // -- PLANT IDLE STATE -- //
-    Action* idleAction = (Action*)(new IdleAction());
-    //mIdleTransition->addCondition();
-    mIdleTransition->setTargetState(Context::State::Idle);
-    mBehaviour->AddTransition(Context::State::Idle, mIdleTransition);
-    mBehaviour->AddAction(Context::State::Idle, idleAction);
-
-    // -- PLANT SHOOT STATE -- //
-    Action* shootAction = (Action*)(new ShootAction());
-    //mAttackTransition->addCondition();
-    mShootTransition->setTargetState(Context::State::Attack);
-    mBehaviour->AddTransition(Context::State::Attack, mShootTransition);
-    mBehaviour->AddAction(Context::State::Idle, idleAction);
 }
-
 Plant::~Plant()
 {
 
@@ -58,15 +46,32 @@ void Plant::Init()
 
 bool Plant::shoot()
 {
-    return false;
+    elapsedTime = clock.getElapsedTime();
+
+    if (mAmmoCount == 0)
+        refillMagazine();
+    else  if (elapsedTime.asSeconds() >= 1)
+    {
+        Projectile* proj = new Projectile(sf::Vector2f(mPosition.x + 10, mPosition.y), 2, "Bullet", sf::Color::Magenta);
+        Playground::getInstance()->AddProjectile(proj);
+        mAmmoCount--;
+
+        clock.restart();
+    }
+
+    return true;
 }
 
 void Plant::Update()
 {
-    int a = 0;
 }
 
-void Plant::checkCollision(std::vector<Entity*>& mColliding, std::vector<Entity*>& mCollider)
+void Plant::checkCollision(std::vector<Entity*> mCollider)
 {
     int a = 1;
+}
+
+void Plant::TakeDamage(int damage)
+{
+    mHealth -= damage;
 }

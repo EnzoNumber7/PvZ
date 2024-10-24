@@ -4,8 +4,6 @@
 
 class ShootAction : public Action
 {
-	sf::Clock clock;
-	sf::Time elapsedTime;
 
 public:
 	void Start(Entity* entity) override;

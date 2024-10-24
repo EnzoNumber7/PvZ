@@ -10,9 +10,12 @@ class Projectile : public Entity
 	int		mSpeed;
 
 public:
-	Projectile(sf::Vector2f position, Behaviour* behaviour, int speed, sf::Color color);
+	Projectile(sf::Vector2f position, int speed, std::string name, sf::Color color);
 	~Projectile() { };
 
+	void Update();
+
+	void checkCollision(std::vector<Entity*> mCollider) override;
 	void Move();
 };
 

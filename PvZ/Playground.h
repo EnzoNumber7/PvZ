@@ -16,13 +16,18 @@ private:
 
 	Playground();
 
-	std::vector<Plant*>			mPlants;
-	std::vector<Zombies*>		mZombies;
+	std::vector<Entity*>			mPlants;
+	std::vector<Entity*>		mZombies;
 	std::vector<Projectile*>	mProjectiles;
 	std::vector<Lane*>			mLine;
 
 	Behaviour*					mPlantsBehavior;
 	Behaviour*					mZombiesBehavior;
+
+	Transition* mIdleTransition;
+	Transition* mShootTransition;
+	Transition* mWalkTransition;
+	Transition* mAttackTransition;
 
 public:
 
@@ -37,7 +42,10 @@ public:
 	void update();
 	void handleUserInput(sf::Event& event, sf::RenderWindow& window);
 
-	std::vector<Zombies*>		GetZombies();
-	std::vector<Plant*>			GetPlant();
+	std::vector<Entity*>		GetZombies();
+	std::vector<Entity*>			GetPlant();
 	std::vector<Projectile*>	GetProjectile();
+	void						AddProjectile(Projectile* proj);
+	void						RemoveProjectile(int index);
+	void						RemoveZombies(int index);
 };

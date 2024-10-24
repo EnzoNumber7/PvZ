@@ -1,6 +1,8 @@
 #pragma once
 #include "Action.hpp"
 
+class Entity;
+
 class WalkAction : public Action
 {
 public:
