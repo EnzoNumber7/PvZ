@@ -9,6 +9,7 @@ class Plant : public Entity
 {
     int mAmmoCount, mMaxAmmo;
 
+    Transition* mIdleTransition;
     Transition* mWalkTransition;
     Transition* mShootTransition;
    

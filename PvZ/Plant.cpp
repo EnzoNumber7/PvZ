@@ -18,6 +18,7 @@ Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int he
     mColor = color;
     mState = Context::State::Idle;
 
+    /*
     // -- PLANT IDLE STATE -- //
     Action* idleAction = (Action*)(new IdleAction());
     //mIdleTransition->addCondition();
@@ -31,6 +32,7 @@ Plant::Plant(sf::Vector2f position, Behaviour* behaviour, int ammo_count, int he
     mShootTransition->setTargetState(Context::State::Attack);
     mBehaviour->AddTransition(Context::State::Attack, mShootTransition);
     mBehaviour->AddAction(Context::State::Idle, idleAction);
+    */
 }
 
 Plant::~Plant()
@@ -50,10 +52,28 @@ void Plant::refillMagazine()
 
 void Plant::Init()
 {
+
+    if (!mTexture.loadFromFile("./rsrc/le_pisto_pois.png"))
+    {
+        std::cerr << "Error loading texture file!" << std::endl;
+        return;
+    }
+
+    float scaleX = 40 / static_cast<float>(getTextureSize().x);
+    float scaleY = 40 / static_cast<float>(getTextureSize().y);
+
+    mSprite.setScale(scaleX, scaleY);
+    mSprite.setTexture(mTexture);
+    mSprite.setPosition(mPosition);
+    mSprite.setOrigin(getTextureSize().x * 0.5f, getTextureSize().y * 0.5f);
+
+    /*
     mShape.setRadius(20.f);
     mShape.setPosition(mPosition);
     mShape.setFillColor(mColor);
     mShape.setOrigin(mShape.getRadius(), mShape.getRadius());
+    mShape.setTexture(&mTexture);
+    */
 }
 
 bool Plant::shoot()

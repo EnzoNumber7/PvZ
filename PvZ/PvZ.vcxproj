@@ -143,6 +143,7 @@
     <ClCompile Include="ShootCondition.cpp" />
     <ClCompile Include="StopAttackCondition.cpp" />
     <ClCompile Include="StopShootCondition.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Transition.cpp" />
     <ClCompile Include="WalkAction.cpp" />
     <ClCompile Include="Zombies.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="ShootCondition.h" />
     <ClInclude Include="StopAttackCondition.h" />
     <ClInclude Include="StopShootCondition.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="Transition.hpp" />
     <ClInclude Include="WalkAction.h" />
     <ClInclude Include="Zombies.h" />
