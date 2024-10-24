@@ -31,7 +31,7 @@ void Zombies::Init()
 
     mSprite.setScale(scaleX, scaleY);
     mSprite.setTexture(mTexture);
-    mSprite.setPosition(sf::Vector2f(mPosition.x, (50 + posY)));
+    mSprite.setPosition(mPosition);
     mSprite.setOrigin(getTextureSize().x * 0.5f, getTextureSize().y * 0.5f);
 
     /*
@@ -44,7 +44,7 @@ void Zombies::Init()
 
 void Zombies::Update()
 {
-    mShape.setPosition(getPosition());
+    mSprite.setPosition(getPosition());
 }
 
 void Zombies::checkCollision(std::vector<Entity*> mCollider)
