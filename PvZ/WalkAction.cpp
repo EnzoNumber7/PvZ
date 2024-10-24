@@ -17,5 +17,4 @@ void WalkAction::Update(Entity* entity)
 
 void WalkAction::End(Entity* entity)
 {
-
 }

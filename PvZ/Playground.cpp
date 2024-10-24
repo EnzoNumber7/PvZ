@@ -70,7 +70,7 @@ void Playground::Init(sf::RenderWindow& window)
 
 	for (int i = 0; i < 8; i++)
 	{
-		Plant* plant = new Plant(sf::Vector2f(10, 50 + (i * 100)), mPlantsBehavior, 10, 1, "Pisto-Poid", sf::Color::Green);
+		Plant* plant = new Plant(sf::Vector2f(10, 50 + (i * 100)), mPlantsBehavior, 10, 5, "Pisto-Pois", sf::Color::Green);
 		plant->Init();
 		Lane* line = new Lane(sf::Vector2f(0, i * 100), sf::Vector2f(window.getSize().x, 100));
 		line->Init();
@@ -88,12 +88,12 @@ void Playground::draw(sf::RenderWindow& window)
 
 	for (int i = 0; i < mPlants.size(); i++)
 	{
-		window.draw(mPlants[i]->getShape());
+		window.draw(mPlants[i]->getSprite());
 	}
 
 	for (int i = 0; i < mZombies.size(); i++)
 	{
-		window.draw(mZombies[i]->getShape());
+		window.draw(mZombies[i]->getSprite());
 	}
 
 	for (int i = 0; i < mProjectiles.size(); i++)
